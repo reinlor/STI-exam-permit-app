@@ -1,0 +1,159 @@
+:root {
+    --base-color:white;
+    --base-2-color: #f0f0f0;
+    --primary-color: #0072CE;
+    --secondary-color: #FFDD44;
+    --text-color:#3F3F3F;
+    --subtext-color: #79747E;
+
+}
+
+
+.balanceContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.balanceHeader{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.balanceData{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.balanceContent{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    background-color: white;
+    padding: 10px;
+    width: 50%;
+}
+
+.balanceBlock{
+    display: grid;
+    grid-template-columns: 0.5fr 0.1fr;
+    column-gap: 200px;
+    background-color: #f0f0f0;
+    align-items: end;
+    margin: 10px;
+    padding: 10px;
+}
+
+.titleTags{
+    font-weight: bold;
+    color: black;
+}
+
+.paymentContent{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    background-color: white;
+    padding: 10px;
+    width: 50%;
+}
+
+.balanceHeader {
+    color: var(--primary-color);
+}
+
+.tuitionFeeContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    margin:10px;
+    padding: 10px;
+    background-color: var(--base-2-color);
+    color: var(--text-color);
+    width: 93%;
+}
+
+.headerTXT {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.otherFeeTXT {
+    font-size: 10px;
+    color: var(--subtext-color);
+}
+
+.separator {
+    background-color: #FFDD44;
+    border: none;
+}
+
+.tuitionFeeContainer2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin:10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 93%;
+}
+
+.tuitionFeeContainer3{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    margin:10px 10px 10px 0;
+    padding: 10px;
+    background-color: var(--base-2-color);
+    color: var(--text-color);
+    width: 107%;
+}
+
+.separator2 {
+    background-color: var(--base-2-color);
+    border: none;
+}
+
+.otherFee2TXT {
+    color: var(--subtext-color);
+}
+
+.totalFeeTXT {
+    color: var(--primary-color);
+}
+
+
+.tuitionFeeContainer4{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    margin:10px 10px 10px 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--base-2-color);
+    width: 107%;
+}
+
+.tuitionFeeContainer5{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    margin:10px 10px 10px 0;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 107%;
+}

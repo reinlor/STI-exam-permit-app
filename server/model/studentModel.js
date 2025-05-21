@@ -1,0 +1,68 @@
+import mongoose from "mongoose";
+
+const studentSchema = new mongoose.Schema({
+    uid:{
+        type:String,
+        require:true
+    },
+    name:{
+        type:String,
+        require:true
+    },
+    academicLevel:{
+        type:String,
+        require:true
+    },
+    yearLevel:{
+        type:String,
+        require:true
+    },
+    program:{
+        type:String,
+        require:true
+    },
+    address:{
+        type:String,
+        require:true
+    },
+    contactNumber:{
+        type:String,
+        require:true
+    },
+    studentEmail:{
+        type:String,
+        require:true
+    },
+    aboutMe:{
+        type:String,
+        default:""
+    },
+    profileUrl:{
+        type:String,
+        default:""
+    },
+    discount:{
+        hasDiscount:{
+            type:Boolean,
+            default:false
+        },
+        discountName:{
+            type:String,
+            default:""
+        },
+        discountFee:{
+            type:Number,
+            default:0
+        },
+        period:{
+            type:String,
+            default:""
+        },
+        total:{
+            type:Number,
+            default:0
+        }
+    }
+});
+
+export default mongoose.model("students", studentSchema)
