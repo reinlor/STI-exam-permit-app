@@ -17,6 +17,18 @@ const studentSchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    semester:{
+        type:String,
+        require:true
+    },
+    gender:{
+        type:String,
+        require:true
+    },
+    payment:{
+        type:String,
+        require:true
+    },
     program:{
         type:String,
         require:true
@@ -41,6 +53,14 @@ const studentSchema = new mongoose.Schema({
         type:String,
         default:""
     },
+    paymentStatus:{
+        type:String,
+        default:""
+    },
+    hasOngoingPayment:{
+        type:Boolean,
+        default:false
+    },
     discount:{
         hasDiscount:{
             type:Boolean,
@@ -57,10 +77,6 @@ const studentSchema = new mongoose.Schema({
         period:{
             type:String,
             default:""
-        },
-        total:{
-            type:Number,
-            default:0
         }
     }
 });

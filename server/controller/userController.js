@@ -10,7 +10,11 @@ export const loginUser = async (req, res) => {
             return res.status(401).json({ success: false, message: "Invalid SID or password" });
         }
 
-        res.status(200).json({ success: true, message: "Login successful", user });
+        res.status(200).json({ 
+            success: true, 
+            message: "Login successful",
+            role: user.role,
+        });
     } catch (error) {
         res.status(500).json({ success: false, message: error.message });
     }

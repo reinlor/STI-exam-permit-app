@@ -6,6 +6,7 @@ import { balanceContext } from "./Balance";
 function Charges() {
     const { balance, studentData } = useContext(balanceContext);
     console.log(balance);
+    console.log(studentData);
     const TwoDecimalPlaces = (number) => {
         return Number((number || 0).toFixed(2));
     };
@@ -16,7 +17,7 @@ function Charges() {
                 <tbody>
                     <tr className={styles.headerTXT}>
                         <td>
-                            Charges for {balance?.schoolYear || "N/A"} {balance?.schoolTerm || "N/A"} Term Tertiary
+                            Charges for {studentData?.schoolYear || "2025-2026"} {studentData?.semester || "N/A"} Tertiary
                         </td>
                     </tr>
                     <tr>

@@ -1,159 +1,195 @@
 :root {
-    --base-color:white;
+    --base-color: #fff;
     --base-2-color: #f0f0f0;
-    --primary-color: #0072CE;
+    --primary-color: #0172B9;
     --secondary-color: #FFDD44;
-    --text-color:#3F3F3F;
+    --text-color: #3F3F3F;
     --subtext-color: #79747E;
-
 }
 
-
-.balanceContainer{
+/* Main container */
+.balanceContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--base-2-color);
 }
 
-.balanceHeader{
+/* Header */
+.balanceHeader {
     display: flex;
-    background-color: white;
-    padding: 10px;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    background: #fff;
+    color: #0172B9;
+    padding: 24px 32px;
+    margin: 18px 0 24px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.balanceData{
+.balanceTitle {
+    color: #0172B9;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.totalBalance {
+    color: #0172B9;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Main content layout */
+.balanceData {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 32px;
 }
 
-.balanceContent{
+/* Card styles */
+.balanceContent, .paymentContent {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 24px;
+    margin-bottom: 24px;
+    width: 48%;
     display: flex;
     flex-direction: column;
-    margin:10px;
-    background-color: white;
-    padding: 10px;
-    width: 50%;
+    gap: 16px;
 }
 
-.balanceBlock{
-    display: grid;
-    grid-template-columns: 0.5fr 0.1fr;
-    column-gap: 200px;
-    background-color: #f0f0f0;
-    align-items: end;
-    margin: 10px;
-    padding: 10px;
+/* Section headers */
+.sectionHeader {
+    color: #0172B9;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #e3f0fc 60%, transparent);
+    padding: 6px 0 6px 8px;
+    border-radius: 6px;
+    display: inline-block;
 }
 
-.titleTags{
-    font-weight: bold;
-    color: black;
-}
-
-.paymentContent{
-    display: flex;
-    flex-direction: column;
-    margin:10px;
-    background-color: white;
-    padding: 10px;
-    width: 50%;
-}
-
-.balanceHeader {
-    color: var(--primary-color);
-}
-
-.tuitionFeeContainer{
+/* Fee containers */
+.tuitionFeeContainer,
+.tuitionFeeContainer2,
+.tuitionFeeContainer3,
+.tuitionFeeContainer4,
+.tuitionFeeContainer5 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-    margin:10px;
-    padding: 10px;
+    align-items: center;
+    padding: 14px 18px;
     background-color: var(--base-2-color);
     color: var(--text-color);
-    width: 93%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
-
-.headerTXT {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.otherFeeTXT {
-    font-size: 10px;
-    color: var(--subtext-color);
-}
-
-.separator {
+.tuitionFeeContainer2 {
     background-color: #FFDD44;
-    border: none;
+    color: #3F3F3F;
+    font-weight: bold;
 }
 
-.tuitionFeeContainer2{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin:10px;
-    padding: 10px;
-    background-color: var(--secondary-color);
+.tuitionFeeContainer3 {
+    width: 120%;
+}
+
+.tuitionFeeContainer4 {
+    background-color: #0172B9;
+    color: #fff;
+}
+
+.tuitionFeeContainer5 {
+    background-color: #0172B9;
     color: var(--text-color);
-    width: 93%;
 }
 
-.tuitionFeeContainer3{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-    margin:10px 10px 10px 0;
-    padding: 10px;
-    background-color: var(--base-2-color);
-    color: var(--text-color);
-    width: 107%;
+/* Miscellaneous */
+.headerTXT {
+    color: #0172B9;
+    font-weight: bold;
 }
 
-.separator2 {
-    background-color: var(--base-2-color);
-    border: none;
-}
-
-.otherFee2TXT {
+.otherFeeTXT, .otherFee2TXT {
+    font-size: 0.95rem;
     color: var(--subtext-color);
 }
 
 .totalFeeTXT {
-    color: var(--primary-color);
+    border-radius: 5px;
+    color: #0172B9;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
 }
 
 
-.tuitionFeeContainer4{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-    margin:10px 10px 10px 0;
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: var(--base-2-color);
-    width: 107%;
-}
-
-.tuitionFeeContainer5{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-    margin:10px 10px 10px 0;
-    padding: 10px;
+.separator, .separator2 {
+    height: 2px;
     background-color: var(--secondary-color);
-    color: var(--text-color);
-    width: 107%;
+    border: none;
+    margin: 12px 0;
+    border-radius: 1px;
+}
+
+.separator {
+    background-color: #FFDD44;
+}
+
+.paymentAssessmentBalance, 
+.paymentTuitionFee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    width: 120%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.paymentTuitionFee {
+    font-weight: bold;
+    color: #2E2B41;
+    background-color: #FFDD44;
+}
+
+.paymentAssessmentBalance {
+    font-weight: bold;
+    color: var(--base-2-color); 
+    background-color: #0172B9;
+}
+
+.finalAmount{
+    transform: translateX(-52%);
+}
+
+.assessmentAmount{
+    transform: translateX(-64%);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .balanceData {
+        flex-direction: column;
+        gap: 0;
+    }
+    .balanceContent, .paymentContent {
+        width: 100%;
+    }
+    .balanceHeader {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
 }

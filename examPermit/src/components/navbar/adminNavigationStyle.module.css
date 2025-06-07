@@ -1,0 +1,48 @@
+.navbarContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 4%, 21%);
+    width: 200px; /* Increased width for better usability */
+    min-width: 150px;
+    height: 100vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08); /* Subtle shadow */
+    align-items: center;
+    padding: 20px 16px 20px 16px;
+    gap: 10px;
+}
+
+.bodyContainer {
+    display: flex;
+}
+
+.navbarContainer div {
+    height: 48px;
+    width: 90%;
+    margin: 8px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;
+    gap: 5px;
+}
+
+.navbarContainer div:hover,
+.navbarContainer .active {
+    background-color: hsl(0, 0%, 30%);
+    color: #ffd700; /* Gold accent on hover/active */
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+    position: relative;
+}
+
+.moduleContainer {
+    flex-grow: 1;
+}

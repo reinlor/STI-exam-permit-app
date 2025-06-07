@@ -1,13 +1,19 @@
-import React,{useState, createContext, useEffect} from "react";
+import React, { useState, createContext, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../components/navbar/Navigation";
 import TransactionContent from "./TransactionContent";
+import styles from "./transactionStyle.module.css";
 
 export const TransactionContext = createContext()
 
 function Transaction() {
     const [transactionData, setTransactionData] = useState([]);
-    const uid = sessionStorage.getItem("uid");
+    const uid = localStorage.getItem("uid");
+
+    const userAccess = localStorage.getItem('role');
+    if (userAccess !== 'Student') {
+        window.location.href = '/';
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,28 +27,29 @@ function Transaction() {
         fetchData();
     }, [])
 
-        
+
 
     const renderContent = () => {
-        if(transactionData.length <= 0){
+        if (transactionData.length <= 0) {
             return (
-                <div>
-                    <h1 className="text-center">No Transaction Found</h1> 
+                <div className={styles.noTransactionMessage}>
+                    <h1 className="text-center">No Transaction Found</h1>
                 </div>
             )
         }
-        else{
+        else {
             return <TransactionContext.Provider value={transactionData}>
-                <TransactionContent/>
+                <TransactionContent />
             </TransactionContext.Provider>
-            
-    }}
+
+        }
+    }
 
     return (
-        <>
+        <div >
             <Navigation />
-                {renderContent()}
-        </>
+            {renderContent()}
+        </div>
     );
 }
 

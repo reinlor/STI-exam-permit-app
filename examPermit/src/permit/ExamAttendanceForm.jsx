@@ -9,8 +9,9 @@ function ExamAttendanceForm() {
 
     return (
         <>
+        <div className={styles.mainPermitContainer}>
             <div className={styles.permitContainer}>
-                <div>
+                <div className={styles.permitHeader}>
                     <h1>Exam Attendance Form</h1>
                     <h3>Tertiary / Senior High School</h3>
                     <br />
@@ -19,15 +20,17 @@ function ExamAttendanceForm() {
                     <p>STUDENT NO:&nbsp; {permit.sid}</p>
                     <p>PROGRAM:&nbsp; {permit.program}</p>
                 </div>
-                <div>
+                <div className={styles.permitHeader2}>
                     <h1>STI COLLEGE DASMARINAS INC.</h1>
                     <p>SY & TERM: <span>{permit.schoolYear} / {permit.term}</span></p>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis facere distinctio perspiciatis
+                    <div className={styles.permitDescription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis facere distinctio perspiciatis
                         repudiandae beatae sed et ullam nam, rem laudantium provident excepturi quae officia repellendus voluptatum
-                        earum optio quasi eaque.</div>
+                        earum optio quasi eaque.
+                    </div>
                 </div>
             </div>
             <ExamPermitTable />
+        </div>
         </>
     )
 }

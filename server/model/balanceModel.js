@@ -20,11 +20,7 @@ const userSchema = new mongoose.Schema({
     schoolYear:{
         type:String,
         require:true
-    },
-    schoolTerm:{
-        type:String,
-        require:true
-    },
+    }
 });
 
 export default mongoose.model("balance", userSchema)

@@ -11,10 +11,26 @@
   margin: 0;
 }
 
-.aboutContainer h1, 
+.aboutContainer h1,
 .aboutContainer h3,
-.aboutContainer p{
+.aboutContainer p {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.aboutContainer h1 {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #0172B9;
+}
+
+.aboutContainer p{
+  margin: 5px;
+}
+
+.aboutContainer .copyright {
+  font-size: 0.8rem;
 }
 
 /* Profile Styling Keneme*/
@@ -22,6 +38,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .profile .profileImage {
@@ -61,5 +78,4 @@
 .profile .profile-text {
   font-family: Arial, sans-serif;
   color: hsl(0 0% 40%);
-  ;
 }

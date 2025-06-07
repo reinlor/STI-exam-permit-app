@@ -1,0 +1,190 @@
+.noDataMessage {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+}
+/*Search Bar*/
+.searchBar {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+}
+
+/*Pages*/
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.paginationButton {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.paginationButton:hover {
+    background-color: #af2c39;
+}
+
+.activeButton {
+    background-color: #dc3545; 
+    color: white;
+    border-color: #dc3545;
+}
+
+/*Payment Data Mismong Container*/
+.paymentData {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: ease 0.5s;
+}
+
+.paymentData:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/*Basic Data Outside*/
+.basicData h2 {
+    font-size: 20px;
+    color: #dc3545;
+}
+
+.basicData h4 {
+    font-size: 16px;
+    color: #555;
+}
+
+.amountData p {
+    font-size: 14px;
+    color: #333;
+}
+/* Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Modal content box */
+.modalContent {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Header */
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.modalHeader h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #dc3545;
+    margin: 0;
+}
+
+/* Close button */
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.closeButton:hover {
+    color: #dc3545;
+}
+
+/* Container for image and details */
+.feesValueContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Image styling */
+.imageProof {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+/* Transaction detail styles */
+.transactionData h1 {
+    font-size: 22px;
+    color: #dc3545;
+    margin: 0;
+}
+
+.transactionData h4 {
+    font-size: 15px;
+    color: #666;
+    margin: 4px 0 10px 0;
+}
+
+.transactionData p {
+    font-size: 14px;
+    color: #333;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+/* 'No Data Found' styling */
+.noDataMessage {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

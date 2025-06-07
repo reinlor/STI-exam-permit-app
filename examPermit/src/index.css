@@ -1,3 +1,23 @@
+:root {
+    --base-color: #fff;
+    --base-2-color: #f0f0f0;
+    --primary-color: #0172B9;
+    --secondary-color: #FFDD44;
+    --text-color: #3F3F3F;
+    --subtext-color: #79747E;
+}
+
 body{
   margin: 0%;
+}
+
+.fullPaidMessage{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color)
+}
+
+.adminContainer{
+  background: #f6f8fa;
 }

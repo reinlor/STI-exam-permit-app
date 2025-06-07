@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './homepageStyle.module.css';
-import slider1 from '../assets/slider/car1.avif';
-import slider2 from '../assets/slider/car2.avif';
-import slider3 from '../assets/slider/car3.avif';
-import slider4 from '../assets/slider/car4.avif';
+import slider1 from '../assets/slider/1-ABM.jpg';
+import slider2 from '../assets/slider/2-MMA.jpg';
+import slider3 from '../assets/slider/3-IT.jpg';
+import slider4 from '../assets/slider/4-Tourism.jpg';
+import slider5 from '../assets/slider/5-Culinary.jpg';
+import slider6 from '../assets/slider/6-STEM.jpg';
+import slider7 from '../assets/slider/7-HUMMS.jpg';
+import slider8 from '../assets/slider/8-unhinged.jpg';
 
-const images = [slider1, slider2, slider3, slider4];
+const images = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8];
 
 function ImageSlider() {
     const [slideIndex, setSlideIndex] = useState(0);

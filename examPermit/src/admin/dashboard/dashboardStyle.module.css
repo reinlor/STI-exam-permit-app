@@ -1,0 +1,81 @@
+.dashboardContainer {
+    padding: 40px;
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.counterDisplay {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.counterDisplay div {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+}
+
+.counterDisplay div:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.counterDisplay h1 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.counterDisplay p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1976D2;
+}
+
+.transactionTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.transactionTable th, .transactionTable td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.transactionTable th {
+    background-color: #1976D2;
+    color: white;
+    font-weight: 600;
+}
+
+.transactionTable tbody tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+.transactionTable tbody tr:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: ease background-color 0.2s;
+}
+
+.transactionTable tr:last-child td {
+    border-bottom: none;
+}
+
+.transactionTableContainer h1{
+    color: hsl(0, 0%, 33%);
+    margin-bottom: 5px;
+}

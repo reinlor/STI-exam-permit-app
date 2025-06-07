@@ -1,10 +1,35 @@
 import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import styles from './navbarStyle.module.css'
 import stiLogo from '../../assets/images/STI-Logo.png'
 import profilePlaceholder from '../../assets/images/placeholder.png'
+import busImg from "../../assets/profile/bus.png";
 import axios from 'axios';
 
 function Navigation(){
+    const uid = localStorage.getItem("uid");
+    const [preview, setPreview] = useState(busImg);
+
+    useEffect(() => {
+        const fetchStudentImage = async () => {
+            if (!uid) return;
+
+            try {
+                const response = await axios.get(`http://localhost:8000/api/students/${uid}`);
+                const profileUrl = response.data.profileUrl;
+
+                if (profileUrl) {
+                    setPreview(profileUrl);
+                } else {
+                    setPreview(busImg);
+                }
+            } catch (error) {
+                console.error("Error fetching student image:", error);
+                setPreview(busImg);
+            }
+        };
+        fetchStudentImage();
+    });
     
     return(
         <>
@@ -22,7 +47,7 @@ function Navigation(){
             </ul>
 
             <div className={styles.navRight}>
-                <Link to="/profile"><img className={styles.iconProfile} src={profilePlaceholder}></img></Link>
+                <Link to="/profile"><img className={styles.iconProfile} src={preview}></img></Link>
             </div>
         </div>
         </>

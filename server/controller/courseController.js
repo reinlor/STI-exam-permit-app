@@ -50,7 +50,7 @@ export const updateCourse = async (req, res) => {
         if (!courseExist) {
             return res.status(404).json({ message: "course not found" });
         }
-        const updatedData = await Course.findByIdAndUpdate(level, req.body, {
+        const updatedData = await Course.findOneAndUpdate({level}, req.body, {
             new: true
         });
         res.status(200).json(updatedData);

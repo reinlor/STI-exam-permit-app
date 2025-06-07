@@ -24,7 +24,7 @@ function About() {
                     <Profile
                         profile={rehneilProfile}
                         name="Lor, Rehneil"
-                        role="Full-Stack Developer"
+                        role="Lead/Full-Stack Developer"
                     />
                     <Profile
                         profile={jordanProfile}
@@ -36,11 +36,15 @@ function About() {
                         name="Tugna, Sean"
                         role="Frontend Developer"
                     />
+                    
+
                 </div>
                 <p><b>
-                    This website is developed to improve the transaction process of the....</b>
-                </p><br />
-                <p>Powered By &copy; 2025, STI College Dasmarinas</p>
+                    This website is developed to improve the transaction process of the cashier office of the STI College Dasmarinas</b>
+                </p>
+                <p className={styles.copyright}>
+                    Powered By &copy; 2025, STI College Dasmarinas
+                </p>
             </div>
         </>
     );

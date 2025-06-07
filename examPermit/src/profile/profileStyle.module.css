@@ -1,0 +1,252 @@
+:root {
+    --primary-color: #0172B9;
+    --primary-color-2: #0056b3;
+    --secondary-color: #f8f9fa;
+    --secondary-color-2: #e2e6ea;
+    --text-color: #212529;
+    --background: #f4f6fb;
+}
+
+/* Page Background */
+.profilePageContainer {
+    background: var(--background);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Layout Containers */
+.mainProfileContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+.profileLeftContainer {
+    width: 60%;
+    padding: 32px 24px;
+    background: #f9fafb;
+    border-right: 1px solid #ececec;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+.profileRightContainer {
+    width: 40%;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: #fff;
+}
+
+/* Profile Information */
+.profileInformationContainer {
+    width: 100%;
+}
+
+.profileInformationHeader {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+}
+
+.profileInformationHeader h3 {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.profileInformationHeader label {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: block;
+}
+
+.profileInformationHeader input {
+    margin-top: 4px;
+    margin-bottom: 14px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: #f6f8fa;
+    font-size: 1rem;
+}
+
+/* Profile Picture */
+.profilePicChangeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.profilePicChangeContainer img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 4px solid var(--primary-color);
+    background: #f6f8fa;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* About Me */
+.profileAboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.profileAboutMeContainer textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+    font-size: 1rem;
+    background: #f6f8fa;
+    margin-top: 8px;
+}
+
+/* Buttons */
+.uploadButton,
+.saveButton, .clearButton {
+    border: none;
+    padding: 10px 28px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 150ms, color 150ms, box-shadow 150ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.clearButton {
+    background: var(--primary-color);
+    color: #fff;
+}
+.clearButton:hover {
+    background: var(--primary-color-2);
+    transform: translateY(-2px);
+    transition: ease 0.2s;
+}
+
+.uploadButton {
+    background: var(--primary-color);
+    color: #fff;
+}
+.uploadButton:hover {
+    background: var(--primary-color-2);
+    transform: translateY(-2px);
+    transition: ease 0.2s;
+}
+
+.saveButton {
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+.saveButton:hover {
+    background: var(--primary-color-2);
+    color: #fff;
+    border-color: var(--primary-color-2);
+    transform: translateY(-2px);
+    transition: ease 0.2s;
+}
+
+/* Logout Button */
+.logoutButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 32px auto 0 auto;
+    max-width: 1100px;
+}
+
+.logoutButtonContainer .logoutButton {
+    padding: 10px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 150ms;
+}
+
+.logoutButtonContainer .logoutButton:hover {
+    background: #b52a37;
+    transform: translateY(-2px);
+    transition: ease 0.2s;
+}
+
+.passwordInputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.inputField {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background-color: #fdfdfd;
+}
+
+.passwordToggle {
+    position: absolute;
+    margin-top: 10px;
+    right: 12px; 
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.passwordToggle:hover {
+    opacity: 1;
+}
+
+.inputField:focus {
+    border-color: #007bff;
+}

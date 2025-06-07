@@ -1,0 +1,219 @@
+.userContainer {
+  padding: 30px;
+  max-width: 1400px;
+  margin: auto;
+  color: #2d3a5a;
+  font-family:  Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.userContainer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #0270b9;
+}
+
+.userBoxing {
+  padding: 12px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(30, 53, 185, 0.25);
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+.searchInput {
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  transition: border-color 0.3s;
+}
+
+.searchInput:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Each Student Display Block */
+.studentDataContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.studentDataContainer:hover {
+  background-color: #eaeaea;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.studentDataContainer .profilePic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Pagination Styling */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 12px;
+}
+
+.paginationButton {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.paginationButton:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.activeButton {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  z-index: 999;
+}
+
+.modalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1400px;
+  min-height: 800px;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalHeader h2 {
+  color: #0270b9;
+  font-size: 1.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+}
+
+/*Baba ni Change Value*/
+.studentInfoNavigation {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.studentInfoNavigation div {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.studentInfoNavigation div:hover {
+  background-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.studentFullInfoContainer {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.basicInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.basicInfoContainer .profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.studentInfoContainer {
+  text-align: start;
+}
+
+.studentInfoContainer h2 {
+  margin: 10px 0 4px 0;
+  font-size: 1.4rem;
+  color: #2d3a5a;
+}
+
+.studentInfoContainer h4 {
+  font-weight: 400;
+  color: #777;
+}
+
+.studentInfoContainer p {
+  color: #555;
+}
+
+.displayModuleContainer {
+  flex-grow: 1;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

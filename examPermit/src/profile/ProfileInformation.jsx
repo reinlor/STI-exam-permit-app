@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useContext } from "react"
 import axios from "axios";
 import toast from 'react-hot-toast';
+import styles from "./profileStyle.module.css";
 
 function ProfileInformation() {
     const [profile, setProfile] = useState({});
-    const uid = sessionStorage.getItem('uid');
+    const uid = localStorage.getItem('uid');
 
     useEffect(() => {
         console.log(uid);
@@ -42,28 +43,30 @@ function ProfileInformation() {
     function handleStudentEmailChange(event) { setProfile(p => ({ ...p, studentEmail: event.target.value })) };
 
     return (
-        <div>
-            <h3>Information</h3>
-            <label>Name:<input type="text" value={profile.name}
-                readOnly /></label><br />
-            <label>Student ID:<input type="text" value={profile.uid}
-                readOnly /></label><br />
-            <label>Academic Level:<input type="text" value={profile.academicLevel}
-                readOnly /></label><br />
-            <label>Year Level:<input type="text" value={profile.yearLevel}
-                readOnly /></label><br />
-            <label>Program:<input type="text" value={profile.program}
-                readOnly /></label><br />
+        <div className={styles.profileInformationContainer}>
+            <div className={styles.profileInformationHeader}>
+                <h3>Information</h3>
+                <label>Name:<input type="text" value={profile.name}
+                    readOnly /></label><br />
+                <label>Student ID:<input type="text" value={profile.uid}
+                    readOnly /></label><br />
+                <label>Academic Level:<input type="text" value={profile.academicLevel}
+                    readOnly /></label><br />
+                <label>Year Level:<input type="text" value={profile.yearLevel}
+                    readOnly /></label><br />
+                <label>Program:<input type="text" value={profile.program}
+                    readOnly /></label><br />
 
-            <h3>Contacts</h3>
-            <label>Address:<input type="text" value={profile.address}
-                onChange={handleAddressChange} /></label><br />
-            <label>Contact Number:<input type="text" value={profile.contactNumber}
-                onChange={handleContatNumberChange} /></label><br />
-            <label>Student Email:<input type="text" value={profile.studentEmail}
-                onChange={handleStudentEmailChange} /></label><br />
+                <h3>Contacts</h3>
+                <label>Address:<input type="text" value={profile.address}
+                    onChange={handleAddressChange} /></label><br />
+                <label>Contact Number:<input type="text" value={profile.contactNumber}
+                    onChange={handleContatNumberChange} /></label><br />
+                <label>Student Email:<input type="text" value={profile.studentEmail}
+                    onChange={handleStudentEmailChange} /></label><br />
 
-            <button onClick={updateData}>Save Changes</button>
+                <button className={styles.saveButton} onClick={updateData}>Save Changes</button>
+            </div>
         </div>
     );
 }
