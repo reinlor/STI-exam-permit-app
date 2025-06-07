@@ -12,5 +12,5 @@ This website is a completion project for 'Web System and Technologies.' It was d
 - Install MongoDB Compass
 - Create a database named **examPermitDB**
 - Create collections: **admins, balances, courses, payments, students, users**
-- Create a field on users collection with : {_id: 02000######, password: "yourpass", role: "Admin"}
+- Create a field on users collection with : **{_id: 02000######, password: "yourpass", role: "Admin"}**
 - Then run both the app and the server 😏
