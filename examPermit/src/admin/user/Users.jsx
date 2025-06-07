@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import userStyle from "./userStyle.module.css";
 import defaultProfilePic from "../../assets/profile/placeholder.png";
 
-import StudentInformation from "./studentInformation";
-import Credentials from "./Credentials";
-import BalanceInfo from "./BalanceInfo";
+import StudentInformation from "./studentInformation.jsx";
+import Credentials from "./Credentials.jsx";
+import BalanceInfo from "./BalanceInfo.jsx";
 
 function Users() {
     const [students, setStudents] = useState([]);
