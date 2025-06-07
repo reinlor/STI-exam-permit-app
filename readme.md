@@ -1,6 +1,6 @@
 # Exam Permit App for STI Dasmarinas (MERN STACK)
 This website is a completion project for 'Web System and Technologies.' It was developed to explore solutions for reducing long lines at registrar and cashier offices, serving as a practical exercise rather than an implemented system within a school institution.
-- **Link:** [vercel](https://sti-exam-permit-app-nu1b.vercel.app/admin)
+- **Link:** [vercel](https://sti-exam-permit-app-nu1b.vercel.app/)
 
 ## Contributors
 - **Lead Programmer:** Lor, Rehneil
