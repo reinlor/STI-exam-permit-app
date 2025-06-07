@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/examPermit/dist/$1"
+        "dest": "/examPermit/$1"
       }
     ],
     "env": {
