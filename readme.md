@@ -5,7 +5,7 @@ This website is a completion project for 'Web System and Technologies.' It was d
 - **Lead Programmer:** Lor, Rehneil
 - **Frontend Developer:** Tugna, Sean John
 - **Frontend Developer:** Colinco, Jordan Vincent
-- **UI/UX Designer:** De Pedro, Dionne
+- **UI/UX Designer:** De Pedro, Dionne Jeus
 
 ## Requirements
 - Install Node
