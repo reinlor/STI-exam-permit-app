@@ -6,7 +6,7 @@
         "src": "examPermit/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "examPermit/dist"
+          "distDir": "dist"
         }
       },
       {
